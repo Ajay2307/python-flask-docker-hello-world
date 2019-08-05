@@ -1,7 +1,6 @@
-FROM python:3.5
-MAINTAINER Shekhar Gulati "shekhargulati84@gmail.com"
+FROM python:2.7
 COPY . /app
 WORKDIR /app
-RUN pip3 install -r requirements.txt
-ENTRYPOINT ["python3"]
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
 CMD ["app.py"]
